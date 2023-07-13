@@ -1,0 +1,31 @@
+{
+  "name": "watermark-jimp",
+  "version": "1.0.0",
+  "description": "This package use for add watermark on image with image or text watermark.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niravsutariya/watermark-jimp.git"
+  },
+  "keywords": [
+    "watermark-jimp",
+    "watermark",
+    "jimp",
+    "text watermark",
+    "image watermark",
+    "text color",
+    "text opacity"
+  ],
+  "author": "Nirav Sutariya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/niravsutariya/watermark-jimp/issues"
+  },
+  "homepage": "https://github.com/niravsutariya/watermark-jimp#readme",
+  "dependencies": {
+    "jimp": ""
+  }
+}
