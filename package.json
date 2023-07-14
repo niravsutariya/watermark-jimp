@@ -1,6 +1,6 @@
 {
   "name": "watermark-jimp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package use for add watermark on image with image or text watermark.",
   "main": "index.js",
   "scripts": {

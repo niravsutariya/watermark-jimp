@@ -1,5 +1,5 @@
 # watermark-jimp
-A powerful watermark library based on Jimp for node.js. This can be used to overlay a "image" watermark in another image or text with text color and text opacity.
+A powerful watermark library based on Jimp for node.js. This can be used to overlay a "image" watermark in another image or text with text color and text opacity and position.
 
 ### Installation
 
@@ -31,6 +31,8 @@ Various options supported by this API are :
 - **ratio** - To specify watermark text. Default is 'Sample watermark'.
 - **opacity** - To specify value between 0.1 to 1 of watermark image. Default is '1'.
 - **dstPath** - To specify the output path. Default is 'watermark-jimp.jpg'.
+- **position** - To specify the position of watermark. Default is 'center'
+    **Supported position value to be:** 'top-left', 'top-center', 'top-right', 'center-left', 'center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'
 
 **Example**
 
@@ -53,9 +55,10 @@ watermark.addWatermark('./img/source.jpg', './img/watermark-logo.png').then(data
 //
 var watermark = require('watermark-jimp');
 var options = {
-	'ratio': 0.6,// Should be less than one
+    'ratio': 0.6,// Should be less than one
     'opacity': 0.6, //Should be less than one
-    'dstPath' : './watermark.jpg'
+    'dstPath' : './watermark.jpg', //Path of destination image file
+    'position' : 'center' //Should be 'top-left', 'top-center', 'top-right', 'center-left', 'center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'
 };
 watermark.addWatermark('./img/source.jpg', './img/watermark-logo.png', options);
 
@@ -76,6 +79,8 @@ Various options supported by this API are :
 - **opacity** - To specify value between 0.1 to 1 of watermark text. Default is '1'.
 - **textSize** - To specify size of text over the main image, value ranged from 1 to 8.
 - **dstPath** - To specify the output path. Default is 'watermark-jimp.jpg'.
+- **position** - To specify the position of watermark. Default is 'center'.
+    **Supported position value to be:** 'top-left', 'top-center', 'top-right', 'center-left', 'center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'
 
 **Example**
 
@@ -98,11 +103,12 @@ watermark.addTextWatermark('./img/source.jpg').then(data => {
 //
 var watermark = require('watermark-jimp');
 var options = {
-	'text': 'watermark-test',
+    'text': 'watermark-test',
     'textSize': 6, //Should be between 1-8
     'opacity': 0.5, //Should be between 0.1 to 1
     'color': "#ffffff", //Should be hax code
-    'dstPath' : './watermark-jimp.jpg'
+    'dstPath' : './watermark-jimp.jpg', //Path of destination image file
+    'position' : 'center' //Should be 'top-left', 'top-center', 'top-right', 'center-left', 'center', 'center-right', 'bottom-left', 'bottom-center', 'bottom-right'
 };
 watermark.addTextWatermark('./img/source.jpg', options);
 ```
